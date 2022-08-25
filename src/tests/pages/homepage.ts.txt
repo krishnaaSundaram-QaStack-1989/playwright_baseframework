@@ -1,0 +1,39 @@
+  import { Locator, Page } from "@playwright/test";
+  import { testInputs } from "../testDatas/testData";
+  import { WebActions } from "@lib/WebActions";
+
+  let webActions: WebActions;
+
+  export class homepage {
+    readonly page: Page;
+    readonly popUpFrame_1: string;
+    readonly popUpFrame_1_closeIcon: string;
+    readonly closeIconInFrame: Locator;
+    readonly timeSheetModule: Locator;
+
+    constructor(page: Page) {
+      this.page = page;
+      webActions = new WebActions(this.page);
+      this.popUpFrame_1 = "#wfx-frame-popup";
+      this.popUpFrame_1_closeIcon =
+        '[aria-label="Click on Close Icon to close the popup"]';
+      this.closeIconInFrame = page
+        .frameLocator(this.popUpFrame_1)
+        .locator(this.popUpFrame_1_closeIcon);
+      this.timeSheetModule = page.locator(
+        'ul li a img[alt="Side Menu - Timesheets"]'
+      );
+    }
+
+    async closePopUpWindow(): Promise<void> {
+      await webActions.confirmElementIsReadyForInteraction(this.closeIconInFrame);
+      await this.closeIconInFrame.click({
+        timeout: testInputs.extendedLongWaits,
+      });
+    }
+
+    async openTimesheetModule(): Promise<void> {
+      await webActions.confirmElementIsReadyForInteraction(this.timeSheetModule);
+      await this.timeSheetModule.click({ timeout: testInputs.mediumWaits });
+    }
+  }
