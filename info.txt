@@ -1,0 +1,18 @@
+# VS Code tips and tricks
+
+To open workspace in vs code
+
+ctrl + p
+
+> open workspace settings
+
+---
+
+# TYPESCRIPT
+
+Ignore type checking for a given file
+https://stackoverflow.com/questions/51145180/how-to-use-ts-ignore-for-a-block
+The // @ts-ignore comment enables the TypeScript compiler to ignore the line below it. or
+// @ts-expect-error
+
+// @ts-nocheck for complete file
