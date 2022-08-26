@@ -13,24 +13,25 @@ For recording tests >>>> npm run recordTest
 
 ## Features
 
-🛠 Built with [React][reactjs], [XState][xstate], [Express][express], [lowdb][lowdb], [Material-UI][material-ui] and [TypeScript][typescript]  
+🛠 Built with [playwright-UI][playwright-ui] and [TypeScript][typescript]  
 ⚡️ Zero database dependencies  
-🚀 Full-stack [Express][express]/[React][reactjs] application with real-world features and tests  
-👮‍♂️ Local Authentication  
-🔥 Database Seeding with End-to-end Tests  
-💻 CI/CD + [Cypress Dashboard][cypressdashboard]
+👮‍♂️ Page Object Model   
+🔥 Playwright POC with helper utils, test data file and sample test to understand this tool
+💻 CI/CD with GitHub Action In progress
 
 
 ## Getting Started
 
-The Cypress Real-World App (RWA) is a full-stack Express/React application backed by a local JSON database ([lowdb]).
+Playwright enables reliable end-to-end testing for modern web apps.
 
-The app is bundled with [example data](./data/database.json) (`data/database.json`) that contains everything you need to start using the app and run tests out-of-the-box.
+Any browser • Any platform • One API
+Cross-browser. Playwright supports all modern rendering engines including Chromium, WebKit, and Firefox.
 
-> 🚩 **Note**
->
-> You can login to the app with any of the [example app xxx](./data/database.json#L2). The default xxxx for all users is `s3cret`.  
-> Example xxx can be seen by running `yarn list:dev:xxx`.
+Cross-platform. Test on Windows, Linux, and macOS, locally or on CI, headless or headed.
+
+Cross-language. Use the Playwright API in TypeScript, JavaScript, Python, .NET, Java.
+
+Test Mobile Web. Native mobile emulation of Google Chrome for Android and Mobile Safari. The same rendering engine works on your Desktop and in the Cloud.
 
 ### Prerequisites
 
