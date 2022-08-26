@@ -8,8 +8,10 @@
     "tests:single:browser": "npx playwright test src/tests/smokeTests --project=chromium",
     "timesheet:chromium": "npx playwright test -g \"@testag\" --project=chromium --headed",
     "timesheet:firefox": "npx playwright test -g \"@testag\" --project=firefox ",
-    "report": "npx playwright show-report",
     "recordTests": "npx playwright codegen https://juliemr.github.io/protractor-demo/"
+    "juliemrCalc": "npx playwright test -g \"@githubaction\" --project=firefox",
+    "report": "npx playwright show-report",
+    
   },
   "keywords": [],
   "author": "",
