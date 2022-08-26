@@ -1,5 +1,6 @@
 import { test, Page } from "@playwright/test";
 import { WebActions } from "@lib/WebActions";
+import { pom } from "@pages/pom";
 import { juliemr } from "@pages/julieCalculatorPage";
 import { testInputs } from "@testDatas/testData";
 
