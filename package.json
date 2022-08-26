@@ -1,7 +1,7 @@
 {
   "name": "playwright_poc",
   "version": "1.0.0",
-  "description": "",
+  "description": " ",
   "main": "index.js",
   "scripts": {
    "juliemrCalc": "npx playwright test -g \"@githubaction\" --project=firefox" 
