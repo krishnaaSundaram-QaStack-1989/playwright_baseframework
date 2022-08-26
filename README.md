@@ -50,7 +50,7 @@ yarn install
 yarn dev
 ```
 
-### Start Cypress
+### Run Playwright Tests
 
 ```shell
 yarn cypress:open
