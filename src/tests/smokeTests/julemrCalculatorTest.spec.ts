@@ -19,7 +19,7 @@ test("Test case 1 - open juliemr calculator url in browser @githubaction ", asyn
   const pomPageActions = new pom(page);
   await pomPageActions.navigateToURL(process.env.juliemrCalc_URL);
 });
-/*
+
 test("Test case 2 - verify url of page  @githubaction ", async () => {
   const actions = new WebActions(page);
   await actions.checkCurrentPageUrlOrTitle(
@@ -58,4 +58,4 @@ test("Test case 7 - enter and submit no for modulo  @githubaction ", async () =>
   await juliemrCalc.enterTwoNumbers(testInputs.operations[4]);
   await juliemrCalc.checkResultRowsAreDisplayed(5);
   await page.pause();
-}); */
+}); 
