@@ -13,7 +13,7 @@ For recording tests >>>> npm run recordTest
 
 ## Features
 
-🛠 Built with [playwright-UI][playwright-ui] and [TypeScript][typescript]  
+🛠 Built with [playwright-ui] and [typescript]  
 ⚡️ Zero database dependencies  
 👮‍♂️ Page Object Model   
 🔥 Playwright POC with helper utils, test data file and sample test to understand this tool
