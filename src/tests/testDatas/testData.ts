@@ -1,6 +1,6 @@
 export const testInputs = {
  hompageUrl: "https://playwright.dev/docs/test-pom",
-  uname: `krishnaasundaram1989@gmail.com`,
+  uname: `xxxxx@gmail.com`,
   pwd: `playwrightpoc@022`,
   waitForElement: 120000,
   shortWaits: 5000,
@@ -20,5 +20,13 @@ export const testInputs = {
     timeSheetTitle: "My Timesheets",
   },
   uploadFilePath: "src/attachments/Test evidence.png",
+ operations: [
+    "ADDITION",
+    "SUBTRACTION",
+    "MULTIPLICATION",
+    "DIVISION",
+    "MODULO",
+  ],
+  julemrCalcUrl: "https://juliemr.github.io/protractor-demo/",
 };
 
