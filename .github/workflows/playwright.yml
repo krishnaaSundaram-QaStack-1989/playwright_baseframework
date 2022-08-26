@@ -5,20 +5,15 @@ on:
   pull_request:
     branches: [ main, master ]
 jobs:
-  test:
+  e2e-tests:
     timeout-minutes: 60
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
-      with:
-        node-version: '14.x'
-    - name: Install dependencies
-      run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright POC tests
-      run: npx playwright test -g \"@githubaction\" --project=firefox
+    - uses: microsoft/playwright-github-action@v1
+    - name: Install dependencies and run tests
+      run: npm install && npm test
     - uses: actions/upload-artifact@v2
       if: always()
       with:
