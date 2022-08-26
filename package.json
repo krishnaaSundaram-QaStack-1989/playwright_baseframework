@@ -5,28 +5,21 @@
   "main": "index.js",
   "scripts": {
     "tests:all:browser": "npx playwright test src/tests/smokeTests ",
-    
     "tests:single:browser": "npx playwright test src/tests/smokeTests --project=chromium",
-    
     "timesheet:chromium": "npx playwright test -g \"@testag\" --project=chromium --headed",
-    
     "timesheet:firefox": "npx playwright test -g \"@testag\" --project=firefox ",
-    
     "report": "npx playwright show-report",
-
     "recordTests": "npx playwright codegen https://juliemr.github.io/protractor-demo/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@playwright/test": "^1.24.2"
-  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
     "dot-env": "^0.0.1",
     "dotenv": "^16.0.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "@playwright/test": "^1.24.2"
   }
 }
