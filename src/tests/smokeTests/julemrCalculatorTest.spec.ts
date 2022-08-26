@@ -57,5 +57,4 @@ test("Test case 7 - enter and submit no for modulo  @githubaction ", async () =>
   const juliemrCalc = new juliemr(page);
   await juliemrCalc.enterTwoNumbers(testInputs.operations[4]);
   await juliemrCalc.checkResultRowsAreDisplayed(5);
-  await page.pause();
 }); 
