@@ -13,7 +13,7 @@ jobs:
     - uses: actions/setup-node@v2
     - uses: microsoft/playwright-github-action@v1
     - name: Install dependencies and run tests
-      run: npm install && npm juliemrCalc
+      run: npm install && npm run juliemrCalc
     - uses: actions/upload-artifact@v2
       if: always()
       with:
