@@ -16,14 +16,8 @@ test.afterAll(async () => {
 });
 
 test("Test case 1 - open juliemr calculator url in browser @githubaction ", async () => {
-  /*
   const pomPageActions = new pom(page);
-  await pomPageActions.navigateToURL(process.env.juliemrCalc_URL); 
-  */
-  await this.page.goto(process.env.juliemrCalc_URL, {
-      timeout: testInputs.extendedLongWaits,
-      waitUntil: "domcontentloaded",
-    });
+  await pomPageActions.navigateToURL(process.env.juliemrCalc_URL);
 });
 
 test("Test case 2 - verify url of page  @githubaction ", async () => {
