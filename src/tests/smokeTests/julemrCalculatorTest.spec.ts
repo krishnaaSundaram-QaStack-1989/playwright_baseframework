@@ -1,6 +1,6 @@
 import { test, Page } from "@playwright/test";
-import { WebActions } from "@lib/WebActions";
 import { pom } from "@pages/pom";
+import { WebActions } from "@lib/WebActions";
 import { juliemr } from "@pages/julieCalculatorPage";
 import { testInputs } from "@testDatas/testData";
 
@@ -57,4 +57,4 @@ test("Test case 7 - enter and submit no for modulo  @githubaction ", async () =>
   const juliemrCalc = new juliemr(page);
   await juliemrCalc.enterTwoNumbers(testInputs.operations[4]);
   await juliemrCalc.checkResultRowsAreDisplayed(5);
-}); 
+});
