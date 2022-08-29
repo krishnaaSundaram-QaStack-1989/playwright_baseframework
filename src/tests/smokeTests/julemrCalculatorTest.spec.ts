@@ -1,7 +1,7 @@
 import { test, Page } from "@playwright/test";
-import { pom } from "@Pages/pom";
+//import { pom } from "@Pages/pom";
 import { WebActions } from "@lib/WebActions";
-import { juliemr } from "@Pages/julieCalculatorPage";
+//import { juliemr } from "@Pages/julieCalculatorPage";
 import { testInputs } from "@testDatas/testData";
 
 test.describe.configure({ mode: "serial" });
