@@ -4,7 +4,7 @@
   "description": " ",
   "main": "index.js",
   "scripts": {
-    "testGitActionsFlow":"npx playwright test -g \"@githubaction\" --project=firefox"
+    "juliemrCalc":"npx playwright test -g \"@githubaction\" --project=firefox"
   },
   "keywords": [],
   "author": "",
