@@ -7,7 +7,7 @@ on:
 jobs:
   e2e-tests:
     timeout-minutes: 60
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
@@ -22,3 +22,28 @@ jobs:
         name: playwright-report
         path: automation-report/
         retention-days: 20
+        
+    - name: Get test results history
+      uses: actions/checkout@v3
+      if: always()
+      continue-on-error: true
+      with:
+        ref: gh-pages
+        path: gh-pages
+
+    - name: GH Pages History
+      uses: PavanMudigonda/html-reporter-github-pages@v1.0
+      id: test-report
+      with:
+        test_results: automation-report
+        gh_pages: gh-pages
+        results_history: results-history
+    
+    - name: Publish Github Pages
+      if: ${{ always() }}
+      uses: peaceiris/actions-gh-pages@v3.8.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: results-history
+        keep_files: true     
