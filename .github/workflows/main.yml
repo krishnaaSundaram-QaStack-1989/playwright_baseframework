@@ -21,4 +21,4 @@ jobs:
       with:
         name: playwright-report
         path: automation-report/
-        retention-days: 30
+        retention-days: 20
