@@ -47,3 +47,15 @@ jobs:
         publish_branch: gh-pages
         publish_dir: results-history
         keep_files: true     
+        
+    - name: Message MS Teams Channel
+      uses: toko-bifrost/ms-teams-deploy-card@master  {what to update here ???}
+      with:
+        github-token: ${{ github.token }}
+        webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }} -- trying to understand this
+        custom-facts: |
+          - name: Github Actions Test Results
+            value: "http://example.com/${{ github.run_id }}" {what to update here ???}
+        custom-actions: |
+          - text: View CI Test Results
+        url: "https://PavanMudigonda.github.io/html-reporter-github-pages/${{ github.run_number }}"  {what to update here ???}
